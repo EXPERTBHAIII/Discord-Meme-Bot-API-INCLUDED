@@ -16,8 +16,6 @@ module.exports = {
 
         try {
             await interaction.deferReply();
-
-            // Fetch meme data, file extension, and website title
             const { data, fileExtension, websiteTitle } = await getMeme();
 
             const memeEmbed = new EmbedBuilder()
@@ -45,10 +43,8 @@ module.exports = {
         setTimeout(() => cooldowns.delete(message.author.id), 5000);
 
         try {
-            // Fetch meme data, file extension, and website title
             const { data, fileExtension, websiteTitle } = await getMeme();
 
-            // Create and send the meme embed
             const memeEmbed = new EmbedBuilder()
                 .setTitle(`${websiteTitle}`)
                 .setImage(`attachment://meme.${fileExtension}`)
@@ -58,7 +54,6 @@ module.exports = {
 
             const reply = await message.reply({ embeds: [memeEmbed], files: [{ attachment: data, name: `meme.${fileExtension}` }] });
 
-            // React with a laughing emoji
             await reply.react('😂');
         } catch (error) {
             console.error('Error processing the request:', error);
