@@ -44,10 +44,10 @@ client.on('interactionCreate', async interaction => {
 });
 
 client.on('messageCreate', async message => {
-    if (message.author.bot) return; // Ignore bot messages
+    if (message.author.bot) return;
 
     const prefix = '!';
-    if (!message.content.startsWith(prefix)) return; // Ignore messages without the prefix
+    if (!message.content.startsWith(prefix)) return;
 
     const args = message.content.slice(prefix.length).trim().split(/ +/);
     const commandName = args.shift().toLowerCase();
@@ -57,7 +57,7 @@ client.on('messageCreate', async message => {
 
     try {
         if (command.executeMessage) {
-            await command.executeMessage(message, client); // Call `executeMessage` for text commands
+            await command.executeMessage(message, client);
         } else {
             await message.reply('This command is only available as a slash command.');
         }
