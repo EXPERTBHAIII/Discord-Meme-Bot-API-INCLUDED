@@ -2,7 +2,7 @@ const { EmbedBuilder, Collection } = require('discord.js');
 const axios = require('axios');
 const cheerio = require('cheerio');
 const cooldowns = new Collection();
-let api = "http://217.160.125.126:9287"
+let api = "http://217.160.125.128:9078"
 
 module.exports = {
     name: 'meme',
