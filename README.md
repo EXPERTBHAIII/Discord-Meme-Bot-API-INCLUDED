@@ -11,7 +11,7 @@ Welcome to Memer Bot, your go-to source for random memes to keep you and your co
 1. Clone the repository:
 
 ```bash
-git clone https://github.com/EXPERTBHAIII/Memer.git
+git clone https://github.com/EXPERTBHAIII/Discord-Meme-Bot-API-INCLUDED.git
 ```
 
 2. Set up environment variables:
